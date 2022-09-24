@@ -5,57 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banana Talks</title>
-    <style>
-        body {
-            margin: 0; 
-            padding: 0;
-        }
-        textarea {
-            width: 40%;
-            display: block;
-            margin: 20px;
-            margin-left: 29%;
-            padding: 10px;
-            height: 130px;
-
-        }
-        #btn-input {
-            margin: 0px 0px 0px 48%;
-            display: inline-block;
-            background-color: yellowgreen;
-            border:none;
-            padding: 5px 4px 5px 4px;
-            border-radius: 10px;
-            color:yellow; 
-        }
-        .txt {
-            margin-left: 29%;
-            margin-top: 20px;
-            font-size: larger;
-        }
-        #txt-output {
-            width: 40%;
-            height: 130px;
-            margin: 20px;
-            margin-left: 29%;
-            padding: 10px;
-            border: .5px solid black;
-        }
-        .head {
-            display: block;
-            border-bottom : 1px solid black;
-            color: yellowgreen;
-            background-color: antiquewhite;
-            padding: 20px 20px 20px 38%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1 class="head">Banana Translate App</h1>
-    <textarea id="txt-input" placeholder="Type something to covert in banana language."></textarea>
-    <button type="button" id="btn-input">Translate</button>
-    <div class="txt">Your output will appear here👇</div>
-    <div id="txt-output"></div>
-    <script type="text/javascript" src="app.js"></script>
+    <div class="container">
+        <textarea id="txt-input" placeholder="Type something to covert in banana language."></textarea>
+        <button type="button" id="btn-input">Translate</button>
+        <div class="txt">Your output will appear here👇</div>
+        <div id="txt-output"></div>
+        <script type="text/javascript" src="app.js"></script>
+    </div>
 </body>
 </html>
