@@ -6,13 +6,13 @@ var txtOutput = document.querySelector("#txt-output");
     
     function getUrlText(text)
     {
-        return apiUrl + "?" + "text=" +text;
+        return apiUrl + "?" + "text=" +text
     }
     
     function errorHandler(error)
     {
         console.error("server down",error);
-        alert("server down");
+        alert("server down")
     }
     
     function clickHandler(){
@@ -27,4 +27,4 @@ var txtOutput = document.querySelector("#txt-output");
         .catch(errorHandler)
     };
     
-    txtOutput.addEventListener("click",clickHandler)
+    btnInput.addEventListener("click", clickHandler)
