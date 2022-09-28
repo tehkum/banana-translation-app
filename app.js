@@ -2,18 +2,29 @@ var btnInput = document.querySelector("#btn-input");
 var txtInput = document.querySelector("#txt-input");
 var txtOutput = document.querySelector("#txt-output");
 
-    function errorHandler(error)
-    {
-        console.error("server down")
-    }
+    var apiUrl = "https://api.funtranslations.com/translate/minion.json"
+    
     function getUrlText(text)
     {
-        return "https://api.funtranslations.com/translate/minion.json?text="+text;
+        return apiUrl + "?" + "text=" +text;
     }
-    function clickHandler()
+    
+    function errorHandler(error)
     {
-        fetch(getUrlText(txtInput.value))
-        .then(response => response.json())
-        .then(json => txtOutput.innerText = json.contents.translated)
+        console.error("server down",error);
+        alert("server down");
     }
-    txtOutput.addEventListener("click",clickHandler);
+    
+    function clickHandler(){
+        var urlInput = txtInput.value;
+        fetch(getUrlText(urlInput))
+        .then(response => response.json())
+        .then(json => { 
+            var translatedText = json.contents.translated; 
+            txtOutput.innerText = translatedText;
+            }
+            )
+        .catch(errorHandler)
+    };
+    
+    txtOutput.addEventListener("click",clickHandler)
